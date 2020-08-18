@@ -1,0 +1,10 @@
+<header class="mb_page_header row">
+    <div class="col-xs-6">
+        <a class="navigator" href="/connections">Connections</a>
+    </div>
+    <%if (typeof(userSession)  != 'undefined'){ %>
+    <div class="col-xs-6 user-placeholder">
+        Welcome, <%= userSession[0] %>
+    </div>
+    <%}%>
+</header>

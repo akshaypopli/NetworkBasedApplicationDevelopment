@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Music World</title>
+		<%- include ('../partials/import.ejs') %>
+	</head>
+	<body>
+		<!-- header starts here -->
+		<%- include ('../partials/header.ejs') %>
+		<!-- header end -->
+
+		<div class="main-content">
+			<!-- main content will go here -->
+			<%- include ('../partials/nav.ejs') %>
+			<section>
+				<% for (var i =0; i < categories.length;  i++ ) { %>
+				<article>
+					<div class="connections-heading c-padding-bottom-10"><%= categories[i] %></div>
+
+					<ul class="c-padding-left-20">
+						<% for (var j =0; j < connections.length;  j++ ) { %>
+							<% if(connections[j].connectionCategory === categories[i]){ %>
+						<li class="connections-list"><a href="/connection/<%= connections[j].connectionId %>"><%= connections[j].connectionName %></a></li>
+						<% }
+					} %>
+					</ul>
+				</article>
+				<% } %>
+
+			</section>
+		</div>
+		<!-- page data will end here -->
+
+		<!-- footer start -->
+		<%- include ('../partials/footer.ejs') %>
+		<!-- footer end -->
+	</body>
+</html>

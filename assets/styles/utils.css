@@ -1,0 +1,118 @@
+
+/*padding classes*/
+
+.c-padding-10 {
+	padding: 10px;
+}
+
+.c-padding-left-10 {
+	padding-left: 10px;
+}
+
+.c-padding-right-10 {
+	padding-right: 10px;
+}
+
+.c-padding-top-10 {
+	padding-top: 10px;
+}
+
+.c-padding-bottom-10 {
+	padding-bottom: 10px;
+}
+
+.c-padding-20 {
+	padding: 20px;
+}
+
+.c-padding-left-20 {
+	padding-left: 20px;
+}
+
+.c-padding-right-20 {
+	padding-right: 20px;
+}
+
+.c-padding-top-20 {
+	padding-top: 20px;
+}
+
+.c-padding-bottom-20 {
+	padding-bottom: 20px;
+}
+
+.c-padding-20-10 {
+	padding: 20px 10px;
+}
+
+
+/*margin classes*/
+.c-margin-10 {
+	margin: 10px;
+}
+
+.c-margin-left-10 {
+	margin-left: 10px;
+}
+
+.c-margin-right-10 {
+	margin-right: 10px;
+}
+
+.c-margin-top-10 {
+	margin-top: 10px;
+}
+
+.c-margin-bottom-10 {
+	margin-bottom: 10px;
+}
+
+.c-margin-20 {
+	margin: 20px;
+}
+
+.c-margin-left-20 {
+	margin-left: 20px;
+}
+
+.c-margin-right-20 {
+	margin-right: 20px;
+}
+
+.c-margin-top-20 {
+	margin-top: 20px;
+}
+
+.c-margin-bottom-20 {
+	margin-bottom: 20px;
+}
+
+.c-margin-20-10 {
+	margin: 20px 10px;
+}
+
+/*colors*/
+.c-text-white {
+	color: #fff !important;
+}
+
+.c-text-black {
+	color: #000 !important;
+}
+
+.btn-grey {
+	background-color: white;
+}
+
+button {
+	color: #fff;
+}
+
+button:hover {
+	color: #fff !important;
+	background-color: #999;
+}
+
+.c-error {
+	color: red;
+}

@@ -1,0 +1,93 @@
+a:hover {
+	text-decoration: none !important;
+}
+/*Index.ejs*/
+section {
+	padding-left: 100px;
+	padding-top: 100px;
+	width: 40%;
+
+}
+
+.mb_page_header {
+	color: grey;
+	padding: 10px 30px;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: #000;
+}
+
+.welcome-header {
+	font-size: 24px;
+	color: #fff;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.welcome-content {
+	color: #fff;
+	font-size: 16px;
+}
+
+.user-placeholder {
+	text-align: right;
+	padding-right: 60px;
+}
+
+/*connections.ejs*/
+
+article {
+	color: #fff;
+	padding-bottom: 20px;
+}
+
+.connections-heading {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.connections-list {
+	list-style-type: none;
+	margin-bottom: 5px;
+}
+
+/*connection.ejs*/
+
+.artist {
+	width: 150px;
+	height: 200px;
+}
+
+.connection-host, .connection-detail {
+	width: 40%;
+	display: inline-block;
+}
+
+/*savedConnection.ejs*/
+th, td {
+	border:	1px solid #fff;
+	padding: 15px !important;
+}
+
+tr {
+	background-color: #000;
+	height: 60px;
+}
+
+.savedConnection {
+	margin-top: 60px;
+	width: 70%;
+}
+
+.btn-savedConnection {
+	padding: 5px;
+	margin: 0px 5px;
+	border-radius: 4px;
+	background-color: #333;
+}
+
+
+/* newConnection.ejs */
+.c-form-newConnectionPage {
+	margin-top: 80px;
+}

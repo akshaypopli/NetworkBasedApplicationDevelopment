@@ -1,0 +1,19 @@
+<header>
+    <div class="row">
+        <div class="col-xs-6 header-icon"><a class="c-text-white" href="/"><img src="/assets/images/icon.jpg" alt="Music World" class="icon-music"> <b>Music World</b></a></div>
+        <div class="col-xs-6">
+            <ul class="ul_header">
+                <li class="li_header"><a href="/newConnection">Start a New Connection</a></li>
+
+
+                <%if (typeof(userSession)  != 'undefined'){ %> 
+                    <li class="li_header"><a href="/myConnections">My Connections</a></li>
+                    <li class="li_header"><a href="/signout">Sign Out</a></li>
+                <% } else {%> 
+                    <li class="li_header"><a href="/login">Login</a></li>
+                    <li class="li_header"><a href="/login">Sign Up</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</header>

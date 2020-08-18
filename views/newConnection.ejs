@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Music World</title>
+		<%- include ('../partials/import.ejs') %>
+	</head>
+	<body>
+		<!-- header starts here -->
+		<%- include ('../partials/header.ejs') %>
+		<!-- header end -->
+
+		<div class="main-content">
+			<!-- main content will go here -->
+
+			<%- include ('../partials/nav.ejs') %>
+
+			<div class="container">
+                <div class="row">
+					<div class="col-xs-12">
+						<form class="c-form-newConnectionPage" method="POST" action="/addnewconnection">
+							<div class="form-group row">
+								<label class="col-form-label col-sm-2" for="topic">Topic</label>
+								<div class="col-sm-4"><input name="topic" id="topic" type="text" class="form-control" placeholder="Topic"/></div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-sm-2" for="name">Name</label>
+								<div class="col-sm-4"><input name="name" id="name" type="text" class="form-control" placeholder="Name"/></div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-sm-2" for="details">Details</label>
+								<div class="col-sm-4"><textarea name="details" id="details" rows=4 class="form-control" placeholder="Details"></textarea></div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-sm-2" for="where">Where</label>
+								<div class="col-sm-4"><input name="where" id="where" type="text" class="form-control" placeholder="Where"/></div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-sm-2" for="when">When</label>
+								<div class="col-sm-4"><input name="when" id="when" type="date" value="2000-12-30" class="form-control" /></div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-sm-2">Time</label>
+								<div class="col-sm-2"><input type="time" name="start" value="00:00" class="form-control" /></div>
+								<div class="col-sm-2"><input type="time" name="end" value="00:00" class="form-control" /></div>
+							</div>
+							<div class="form-group row">
+								<label class="col-form-label col-sm-2"></label>
+								<div class="col-sm-4"><input type="submit" value="Create Connection" class="btn btn-primary"/></div>
+							</div>
+							<!-- error -->
+							<%if(errorsNewConnectionsflag){ %><div class="form-group row">
+								<%for(var i=0; i < error.length; i++){ %>
+								
+									<p class="c-error col-sm-offset-2 col-sm-6"><b> * <%= error[i].param %> : <%= error[i].msg %> </b></p>
+							<% } %></div>
+							<% } %>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- page data will end here -->
+
+		<!-- footer start -->
+		<%- include ('../partials/footer.ejs') %>
+		<!-- footer end -->
+	</body>
+</html>

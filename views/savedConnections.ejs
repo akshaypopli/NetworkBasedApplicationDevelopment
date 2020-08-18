@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Music World</title>
+		<%- include ('../partials/import.ejs') %>
+  		
+	</head>
+	<body>
+		<!-- header starts here -->
+		<%- include ('../partials/header.ejs') %>
+		<!-- header end -->
+
+		<div class="main-content">
+			<!-- main content will go here -->
+
+			<%- include ('../partials/nav.ejs') %>
+
+			<section class="savedConnection c-text-white">
+				<div><%= userSession[0]%>'s Connection</div><br>
+				<table>
+					<thead>
+						<tr>
+							<th>Connection</th>
+							<th>Category</th>
+							<th>Going?</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						<%if(userConnections.length == 0){ %>
+						<tr>
+							<td colspan="4">No Connections Found</td>
+						</tr>
+						<%} else { %>
+						<%for(var j=0; j < userConnections.length; j++){ %>	
+						<tr>								
+							<td><%= userConnections[j].connection.connectionName %></td>
+							<td><%= userConnections[j].connection.connectionCategory %></td>
+							<td><%= userConnections[j].rsvp %></td>	
+							<td>
+								<form method="get">
+									<button type="submit" formaction="/connection/<%= userConnections[j].connection.connectionId%>" class="btn btn-savedConnection">Update</button>
+									<button type="submit" formaction="/myConnections/delete" name="conId" value="<%= userConnections[j].connection.connectionId%>"	 class="btn btn-savedConnection">Delete</button>
+								</form>
+							</td>
+						</tr>
+						<% }} %>
+					</tbody>
+				</table>
+			</section>
+		</div>
+		<!-- page data will end here -->
+
+		<!-- footer start -->
+		<%- include ('../partials/footer.ejs') %>
+		<!-- footer end -->
+	</body>
+</html>

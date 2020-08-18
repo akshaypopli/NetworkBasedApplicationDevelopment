@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Music World</title>
+		<%- include ('../partials/import.ejs') %>
+	</head>
+	<body>
+		<!-- header starts here -->
+		<%- include ('../partials/header.ejs') %>
+		<!-- header end -->
+
+		<div class="main-content">
+			<!-- main content will go here -->
+
+			<%- include ('../partials/nav.ejs') %>
+
+			<section>
+				<article>
+					<div class="connections-heading c-padding-bottom-20"><%= connection.connectionName %></div>
+					<div>
+						<div class="connection-host">
+							<img class="artist" src="../assets/images/David_Guetta.png" alt="artist">
+						</div>
+						<div class="connection-detail">
+							<p><%= connection.host %></p>
+							<p><%= connection.date %></p>
+							<p><%= connection.time %> (24 hrs format)</p>
+							<p><%= connection.loc %></p>
+						</div>
+					</div>
+				</article>
+				<div class="c-text-white c-margin-bottom-20">
+					<div class="connections-heading c-padding-bottom-10">Details</div>
+					<div class="about-connections"><%= connection.detail %></div>
+				</div>
+
+				<div class="c-text-white c-margin-bottom-20">
+					<div class="connections-heading c-padding-bottom-10">Are you going? 63 opeople going</div>
+					<div class="about-connections">
+						<form method="get">
+							<input hidden name="id" value="<%= connection.connectionId %>">
+							<button type="submit" formaction="/myConnections/rsvp" class="btn btn-success" name="rsvp" value="Yes">Yes</button>
+							<button type="submit" formaction="/myConnections/rsvp" class="btn btn-danger" name="rsvp" value="No">No</button>
+							<button type="submit" formaction="/myConnections/rsvp" class="btn btn-primary" name="rsvp" value="Maybe">Maybe</button>
+						</form>
+					</div>
+
+					
+				</div>
+			</section>
+		</div>
+		<!-- page data will end here -->
+
+		<!-- footer start -->
+		<%- include ('../partials/footer.ejs') %>
+		<!-- footer end -->
+	</body>
+</html>
